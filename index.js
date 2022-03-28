@@ -26,9 +26,7 @@ app.get("/", (req, res) => {
   ];
 
   const random = Math.floor(Math.random() * nomes.length);
-  res.status(200).json([random, nomes[random]]);
-
-  console.log([random, nomes[random]])
+  res.status(200).json({sortudo: nomes[random]});
 });
 
 
