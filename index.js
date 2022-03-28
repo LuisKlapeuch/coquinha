@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+const port = process.env.PORT || 3000
+
+app.listen(port, console.log(`working on port: ${port}`));
+
 app.get("/", (req, res) => {
   const nomes = [
     "Luis",
@@ -27,4 +31,4 @@ app.get("/", (req, res) => {
   console.log([random, nomes[random]])
 });
 
-app.listen(3000, console.log("funcionando"));
+
