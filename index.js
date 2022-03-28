@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000
 
 app.listen(port, console.log(`working on port: ${port}`));
 
-app.get("/", (req, res) => {
+app.get("/sortudo", (req, res) => {
   const nomes = [
     "Luis",
     "flavio",
