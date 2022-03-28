@@ -1,9 +1,12 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
 app.listen(port, console.log(`working on port: ${port}`));
+
+app.use(cors());
 
 app.get("/sortudo", (req, res) => {
   const nomes = [
@@ -22,11 +25,9 @@ app.get("/sortudo", (req, res) => {
     "Carlos",
     "Cristhian",
     "Leo das Pipocas",
-    "Letícia"
+    "Letícia",
   ];
 
   const random = Math.floor(Math.random() * nomes.length);
-  res.status(200).json({sortudo: nomes[random]});
+  res.status(200).json({ sortudo: nomes[random] });
 });
-
-
